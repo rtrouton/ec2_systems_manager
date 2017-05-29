@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.2",
+  "description": "Stop Tomcat on Jamf Pro instances",
+  "parameters": {
+    "upgradeType":{
+      "type":"String",
+      "default": "",
+      "description":"Stopping the Tomcat server on Jamf Pro servers"
+    }
+  },
+  "runtimeConfig": {
+    "aws:runShellScript": {
+      "properties": [
+        {
+          "id": "0.aws:runShellScript",
+          "runCommand": [
+            "#!/bin/bash",
+            "",
+            "# Services Restarter - Stop the Jamf Tomcat installation",
+            "",
+            "# Stop the Jamf Tomcat processes",
+            "",
+            "service jamf.tomcat8 stop"
+          ]
+        }
+      ]
+    }
+  }
+}

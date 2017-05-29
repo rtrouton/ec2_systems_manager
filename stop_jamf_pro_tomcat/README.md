@@ -1,0 +1,1 @@
+This EC 2 Systems Manager document is designed to stop Jamf Pro's Tomcat 8 install on RedHat-compatible Linux OS distros.
